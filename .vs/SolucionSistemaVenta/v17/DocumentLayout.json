@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|c:\\users\\diego\\source\\repos\\dgmolar\\proyecto2-ventas\\sistemaventa.aplicacionweb\\views\\venta\\nuevaventa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|solutionrelative:sistemaventa.aplicacionweb\\views\\venta\\nuevaventa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|c:\\users\\diego\\source\\repos\\dgmolar\\proyecto2-ventas\\sistemaventa.aplicacionweb\\wwwroot\\js\\vistas\\nueva_venta.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|solutionrelative:sistemaventa.aplicacionweb\\wwwroot\\js\\vistas\\nueva_venta.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,32 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Nueva_Venta.js",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\wwwroot\\js\\vistas\\Nueva_Venta.js",
-              "RelativeDocumentMoniker": "SistemaVenta.AplicacionWeb\\wwwroot\\js\\vistas\\Nueva_Venta.js",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\wwwroot\\js\\vistas\\Nueva_Venta.js",
-              "RelativeToolTip": "SistemaVenta.AplicacionWeb\\wwwroot\\js\\vistas\\Nueva_Venta.js",
-              "ViewState": "AQIAANsAAAAAAAAAAIAwwOoAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-09T22:22:08.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NuevaVenta.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\Views\\Venta\\NuevaVenta.cshtml",
-              "RelativeDocumentMoniker": "SistemaVenta.AplicacionWeb\\Views\\Venta\\NuevaVenta.cshtml",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\Views\\Venta\\NuevaVenta.cshtml",
-              "RelativeToolTip": "SistemaVenta.AplicacionWeb\\Views\\Venta\\NuevaVenta.cshtml",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAYwFIAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-09T22:20:23.527Z",
-              "EditorCaption": ""
             }
           ]
         }
