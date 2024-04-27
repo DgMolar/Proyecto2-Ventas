@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|c:\\users\\diego\\source\\repos\\dgmolar\\proyecto2-ventas\\sistemaventa.aplicacionweb\\wwwroot\\js\\vistas\\historial_venta.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|solutionrelative:sistemaventa.aplicacionweb\\wwwroot\\js\\vistas\\historial_venta.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|c:\\users\\diego\\source\\repos\\dgmolar\\proyecto2-ventas\\sistemaventa.aplicacionweb\\views\\venta\\historialventa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|solutionrelative:sistemaventa.aplicacionweb\\views\\venta\\historialventa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|c:\\users\\diego\\source\\repos\\dgmolar\\proyecto2-ventas\\sistemaventa.aplicacionweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CC44BAF4-642B-43E8-BFBA-680D92BCF0BC}|SistemaVenta.AplicacionWeb\\SistemaVenta.AplicacionWeb.csproj|solutionrelative:sistemaventa.aplicacionweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,41 +38,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HistorialVenta.cshtml",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\Views\\Venta\\HistorialVenta.cshtml",
-              "RelativeDocumentMoniker": "SistemaVenta.AplicacionWeb\\Views\\Venta\\HistorialVenta.cshtml",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\Views\\Venta\\HistorialVenta.cshtml",
-              "RelativeToolTip": "SistemaVenta.AplicacionWeb\\Views\\Venta\\HistorialVenta.cshtml",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAwF4AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-15T03:26:52.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Historial_Venta.js",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\wwwroot\\js\\vistas\\Historial_Venta.js",
               "RelativeDocumentMoniker": "SistemaVenta.AplicacionWeb\\wwwroot\\js\\vistas\\Historial_Venta.js",
               "ToolTip": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\wwwroot\\js\\vistas\\Historial_Venta.js",
               "RelativeToolTip": "SistemaVenta.AplicacionWeb\\wwwroot\\js\\vistas\\Historial_Venta.js",
-              "ViewState": "AQIAANYAAAAAAAAAAAAkwNsAAAAaAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAowGMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-15T03:26:23.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\appsettings.json",
-              "RelativeDocumentMoniker": "SistemaVenta.AplicacionWeb\\appsettings.json",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\DgMolar\\Proyecto2-Ventas\\SistemaVenta.AplicacionWeb\\appsettings.json",
-              "RelativeToolTip": "SistemaVenta.AplicacionWeb\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-11T02:26:54.211Z",
+              "WhenOpened": "2024-04-27T20:40:53.285Z",
               "EditorCaption": ""
             }
           ]
