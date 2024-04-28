@@ -205,7 +205,7 @@ $("#tbventa tbody").on("click", ".btn-info", function () {
                             datos.DetalleVenta.push(detalleVenta);
                         })
                     );
-
+                    
                     console.log("Descuento total:", descuentoProductos); // Descuento total para todos los productos
                     const totalImporteTranslado = datos.DetalleVenta.reduce((total, detalle) => {
                         return total + parseFloat(detalle.importeTranslado);
@@ -216,132 +216,35 @@ $("#tbventa tbody").on("click", ".btn-info", function () {
                     datos.totalImporteTranslado = totalImporteTranslado.toString();
                     // Aquí se solicitaría el XML
                     let xmlGenerado = generarXML(datos);
-                    console.log(xmlGenerado);
-                    return
-                    async function timbrarCFDI(user, password, xml) {
-                        try {
-                            const requestBody = `<?xml version="1.0" encoding="utf-8"?>
-            <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-                <soap:Body>
-                    <TimbrarF xmlns="http://ws.urbansa.com/">
-                        <Usuario>${user}</Usuario>
-                        <Password>${password}</Password>
-                        <StrXml>${xml}</StrXml>
-                    </TimbrarF>
-                </soap:Body>
-            </soap:Envelope>`;
+                    let datosCFDI = JSON.stringify(xmlGenerado);;
+                    console.log(datosCFDI);
+                    console.log("El numero de venta es:", d.numeroVenta)
+                    // Realizar la solicitud HTTP POST al backend con el XML generado
+                    const response = await fetch('/Facturacion/Facturar', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: datosCFDI // Pasar el XML generado como cuerpo de la solicitud
+                    });
 
-                            const response = await fetch('https://ws.urbansa.com/app/timbrado.asmx', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'text/xml; charset=utf-8',
-                                    'SOAPAction': 'http://ws.urbansa.com/TimbrarF'
-                                },
-                                body: requestBody
-                            });
-
-                            if (!response.ok) {
-                                throw new Error(`HTTP error! Status: ${response.status}`);
-                            }
-
-                            const responseData = await response.text();
-                            console.log(responseData); // Esto imprimirá la respuesta XML del servicio web
-
-                            console.log('CFDI timbrado correctamente.');
-
-                        } catch (error) {
-                            console.error('Error al timbrar el CFDI:', error.message);
-                        }
+                    // Verificar el estado de la respuesta
+                    if (response.ok) {
+                        // La solicitud se realizó con éxito
+                        alert("La facturación se realizó correctamente.")
+                        console.log('La facturación se realizó correctamente.');
+                        location.reload()
+                    } else {
+                        // Hubo un error en la solicitud
+                        console.error('Error al intentar facturar:', response.statusText);
                     }
-
-                    // Llamar a la función para timbrar el CFDI
-                    await timbrarCFDI('usuario', 'contraseña', 'xml');
-      
-                    
-                    //// Crear un blob con el contenido del XML
-                    //const blob = new Blob([xmlGenerado], { type: 'text/xml' });
-
-                    //// Crear un objeto URL para el blob
-                    //const url = window.URL.createObjectURL(blob);
-
-                    //// Crear un elemento de ancla para descargar el archivo
-                    //const a = document.createElement('a');
-                    //a.href = url;
-                    //a.download = 'factura.xml'; // Nombre del archivo a descargar
-                    //a.click();
-
-                    //// Liberar el objeto URL
-                    //window.URL.revokeObjectURL(url);
-
-                    //location.reload();
+                   
                 } catch (error) {
                     console.error(error);
                     // Manejar errores según sea necesario
                 }
             });
 
-
-            //document.getElementById("linkFacturar").addEventListener("click", () => {
-            //    obtenerInfoNegocio();
-            //    /*buscarProducto(idProducto)*/
-            //    let datos = {
-            //        Venta: {
-            //            idLocal: d.numeroVenta,
-            //            version: "4.0",
-            //            serie: "A",
-            //            folio: "01",
-            //            formaPago: "01",
-            //            subTotal: d.subTotal,
-            //            descuento: "100",
-            //            moneda: negocioData.simboloMoneda,
-            //            tipoCambio: "1.0",
-            //            total: d.total,
-            //            tipoDeComprobante: "I",
-            //            metodoPago: "01-Efectivo",
-            //            lugarExpedicion: negocioData.direccion,
-            //            regimenFiscal: negocioData.telefono,
-            //            rfc: dataCliente.rfc,
-            //            nombre: dataCliente.nombre,
-            //            domicilioFiscalReceptor: dataCliente.domicilioFiscalReceptor,
-            //            regimenFiscalReceptor: dataCliente.regimenFiscalReceptor,
-            //            usoCFDI:"G01"
-
-            //        },
-            //        DetalleVenta: [],
-            //        totalImporteTranslado: "$50"
-            //    };
-            //    /*ITERAR SOBRE DETALLEVENTA*/
-            //    d.detalleVenta.forEach(detalle => {
-            //        /*LLAMAR INFORMACION DE PRODUCTO*/
-            //        console.log("voy a buscar a", detalle.idProducto)
-            //        buscarProducto(detalle.idProducto)
-            //        productoData = productoData;
-            //        let detalleVenta = {
-            //            claveProdServ: productoData.claveProductoSat,
-            //            noIdentificacion: detalle.idProducto.toString(),
-            //            cantidad: detalle.cantidad.toString(),
-            //            claveUnidad: productoData.unidadMedidaSat,
-            //            unidad: productoData.unidadMedida,
-            //            descripcion: detalle.descripcionProducto,
-            //            valorUnitario: detalle.precio.toString(), // Suponiendo que precio es un número
-            //            importe: (detalle.cantidad * detalle.precio).toString(), // Suponiendo que cantidad y precio son números
-            //            objetoImp: productoData.objetoImpuesto,
-            //            base: (detalle.cantidad * detalle.precio).toString(),
-            //            impuesto: productoData.impuesto,
-            //            tipoFactor: productoData.factorImpuesto,
-            //            tasaOCuota: productoData.valorImpuesto,
-            //            importeTranslado: (detalle.cantidad * detalle.valorImpuesto).toString(),
-            //        };
-
-            //        datos.DetalleVenta.push(detalleVenta);
-            //    });
-
-
-            //    /*AQUI SE SOLICITAR EL XML*/
-            //    let xmlGenerado = generarXML(datos);
-            //    console.log(xmlGenerado);
-            //})
-            ///*FIN de evento*/
             $("#modalData").modal("show");
             $("#linkImprimir").attr("href", `/Venta/MostrarPDFVenta?numeroVenta=${d.numeroVenta}`)
 
@@ -393,7 +296,7 @@ function obtenerInfoNegocio() {
 
 function generarXML(datos) {
     let xml = `<Comprobante>`;
-    xml += `<idLocal>${datos.Venta.idLocal}</idLocal>`;
+    xml += `<idLocal>Pruebas-1${datos.Venta.idLocal}</idLocal>`;
     xml += `<version>${datos.Venta.version}</version>`;
     xml += `<serie/>`;
     xml += `<folio>${datos.Venta.folio}</folio>`;
