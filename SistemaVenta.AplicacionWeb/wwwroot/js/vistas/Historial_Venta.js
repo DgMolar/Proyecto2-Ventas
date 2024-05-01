@@ -235,6 +235,7 @@ $("#tbventa tbody").on("click", ".btn-info", function () {
                         console.log('La facturación se realizó correctamente.');
                         location.reload()
                     } else {
+                        alert("La facturación NO se realizó correctamente. FAVOR DE VERIFICAR QUE LA VENTA NO SE HAYA FACTURADO ANTERIORMENTE O VERIFIQUE LOS DATOS DEL CLIENTE.")
                         // Hubo un error en la solicitud
                         console.error('Error al intentar facturar:', response.statusText);
                     }
@@ -296,7 +297,7 @@ function obtenerInfoNegocio() {
 
 function generarXML(datos) {
     let xml = `<Comprobante>`;
-    xml += `<idLocal>Pruebas-1${datos.Venta.idLocal}</idLocal>`;
+    xml += `<idLocal>FACTURA${datos.Venta.idLocal}</idLocal>`;
     xml += `<version>${datos.Venta.version}</version>`;
     xml += `<serie/>`;
     xml += `<folio>${datos.Venta.folio}</folio>`;
